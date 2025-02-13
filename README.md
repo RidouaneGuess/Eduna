@@ -76,4 +76,6 @@ if __name__ == "__main__":
         print(f"Eduna: {response}\n")
 ```
   ## Exécuter le chatbot
+  ```bash
   python main.py
+```
