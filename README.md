@@ -6,24 +6,38 @@ C'est un projet de mise en place d'un chatbot basé adapté à la réalité afri
 ```bash
 pkg update && pkg upgrade -y
 pkg install proot-distro -y
+```
 ## Installer Ubuntu via Proot
+```bash
 proot-distro install ubuntu
+```
 ## Étape 3 : Lancer Ubuntu
+```bash
 proot-distro login ubuntu
+```
 # 2 Installation des dépendances
 ## Étape 4 : Mettre à jour Ubuntu
+```bash
 apt update && apt upgrade -y
+```
 ## Étape 5 : Installer Python et pip
+```bash
 apt install python3 python3-pip -y
+```
 ## Étape 6 : Installer venv sans ensureepip
+```bash
 apt install python3.10-venv -y
 python3 -m venv --without-pip myenv
 source myenv/bin/activate
 curl https://bootstrap.pypa.io/get-pip.py | python
+```
 ## Étape 7 : Installer openai et requests
+```bash
 pip install requests requests
+```
 # Installation du chatbot(Eduna)
 ## Étape 8 : Cloner le projet ou créer main.py
+```python
 import requests
 import json
 
@@ -60,5 +74,6 @@ if __name__ == "__main__":
         chat_history.append({"role": "assistant", "content": response})
 
         print(f"Eduna: {response}\n")
+```
   ## Exécuter le chatbot
   python main.py
