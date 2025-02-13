@@ -3,6 +3,7 @@ C'est un projet de mise en place d'un chatbot basé adapté à la réalité afri
 
 # 1 Installation de Ubuntu sur Termux
 ## Étape 1 : Installer Termux et ses dépendances
+```bash
 pkg update && pkg upgrade -y
 pkg install proot-distro -y
 ## Installer Ubuntu via Proot
